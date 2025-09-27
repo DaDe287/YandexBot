@@ -27,6 +27,7 @@ async def start_message(message: Message, state: FSMContext):
         caption=start_text,
         reply_markup=country_keyboard
     )
+    print(1)
     await state.update_data(last_msg_id=bot_msg.message_id)
 
 @router.callback_query(F.data == "back")
